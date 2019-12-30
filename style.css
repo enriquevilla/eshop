@@ -105,3 +105,147 @@ body {
         width: 100%;
     }
 }
+
+/* slider CSS */
+
+.slider {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+}
+
+.carousel {
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.5);
+}
+
+.carousel-indicators {
+    z-index: 1 important!;
+}
+
+.h-85 {
+    height: 85%;
+}
+
+@media only screen and (max-width: 980px) {
+    .slider {
+        width: 95vw;
+        height: 66vh;
+        padding-left: 3px;
+        padding-right: 5px;
+    }
+}
+
+.products {
+    margin: 50px 0;
+}
+
+.products img {
+    width: 100%;
+    padding: 20px 0;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.title-box {
+    background: orange;
+    color: #fff;
+    width: 180px;
+    padding: 4px 10px;
+    height: 40px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.title-box h2 {
+    font-size: 24px;
+}
+
+.title-box::after {
+    content: '';
+    border-top: 40px solid orange;
+    border-right: 50px solid transparent;
+    position: absolute;
+    display: flex;
+    margin-top: -4px;
+    margin-left: 170px;
+}
+
+.individual-product h5 {
+    color: #999999;
+}
+
+.individual-product img {
+    width: 100%;
+}
+
+.product-overlay {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 10%;
+    margin-left: 0;
+    width: 70px;
+}
+
+.product-overlay .fa {
+    cursor: pointer;
+    background-color: #cccccc;
+    color: #000;
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    padding: 7px;
+    margin-left: -80px;
+    margin-top: -20px;
+    border-radius: 4px;
+}
+
+.product-overlay .btn-secondary {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.individual-product:hover .product-overlay {
+    opacity: 1;
+    margin-left: 5%;
+    transition: 0.5s;
+}
+
+.individual-product:hover img {
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 980px) {
+    .individual-product:hover img {
+        transform: scale(1.05);
+    }
+    .individual-product {
+        border-bottom-style: solid;
+        border-bottom-width: 80%;
+        border-bottom-color: orange;
+    }
+}
+
+.fa-envelope {
+    margin-right: 5px;
+}
+
+.fa-mobile {
+    margin-right: 5px;
+}
+
+.footer {
+    margin-top: 50px;
+    background: #000;
+    color: #fff;
+}
+
+.footer h1 {
+    font-size: 24px;
+    padding-top: 20px;
+}
+
+.footer p {
+    font-size: 16px;
+}

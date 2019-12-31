@@ -118,8 +118,14 @@ body {
     box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.5);
 }
 
-.carousel-indicators {
-    z-index: 1 important!;
+.carousel-indicators .inactive {
+    z-index: 2 !important;
+    background-color: #888888;
+}
+
+.carousel-indicators .active {
+    z-index: 2 !important;
+    background-color: #444444;
 }
 
 .h-85 {
@@ -248,4 +254,142 @@ body {
 
 .footer p {
     font-size: 16px;
+}
+
+section .wave {
+    position: absolute;
+    width: 100%;
+    height: 142px;
+    bottom: 0;
+    left: 0;
+    background: url(images/wave.png);
+    animation: animate 10s linear infinite;
+    z-index: 1;
+}
+
+section .wave:before {
+    content: '';
+    width: 100%;
+    height: 142px;
+    background: url(images/wave.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    animation: animate-reverse 10s linear infinite;
+    z-index: 1;
+}
+
+section .wave:after {
+    content: '';
+    width: 100%;
+    height: 142px;
+    background: url(images/wave.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    animation-delay: -5s;
+    animation: animate-reverse 20s linear infinite;
+    z-index: 1;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 1360px;
+    }
+}
+
+@keyframes animate-reverse {
+    0% {
+        background-position: 1360px;
+    }
+    100% {
+        background-position: 0;
+    }
+}
+
+.product-page-img {
+    height: 300px;
+}
+
+.single-product {
+    margin-top: 70px;
+}
+
+.col-md-7 h2 {
+    color: #555;
+}
+
+.single-product .fa {
+    color: orange;
+}
+
+.single-product .price {
+    color: orange;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.single-product input {
+    border: 1px solid #ccc;
+    font-weight: bold;
+    height: 33px;
+    text-align: center;
+    width: 30px;
+}
+
+.single-product .btn-primary {
+    background-color: orange !important;
+    font-weight: bold;
+    color: #fff;
+    font-size: 15px;
+    margin-left: 20px;
+    border: none;
+    box-shadow: none !important;
+}
+
+.single-product .fa-shopping-cart {
+    color: #fff;
+}
+
+.product-description h6 {
+    margin-top: 50px;
+    color: orange;
+}
+
+.product-description p {
+    margin-top: 30px;
+}
+
+.product-description hr {
+    margin-bottom: 50px;
+}
+
+.title-box-lg {
+    background: orange;
+    color: #fff;
+    width: 230px;
+    padding: 4px 10px;
+    height: 40px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.title-box-lg h2 {
+    font-size: 24px;
+}
+
+.title-box-lg::after {
+    content: '';
+    border-top: 40px solid orange;
+    border-right: 50px solid transparent;
+    position: absolute;
+    display: flex;
+    margin-top: -4px;
+    margin-left: 220px;
 }

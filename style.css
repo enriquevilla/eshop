@@ -393,3 +393,23 @@ section .wave:after {
     margin-top: -4px;
     margin-left: 220px;
 }
+
+.copyright {
+    margin-bottom: -80px;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #555;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+}
+
+.footer .copyright {
+    font-size: 10px;
+}
+
+.footer hr {
+    margin-top: -15px;
+}
